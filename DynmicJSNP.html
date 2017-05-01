@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Sky Net</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jsnow.js"></script>
+
+    <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+div {
+    width: 300px;
+    margin: auto;
+    font-style: oblique;
+    text-decoration-color: red;
+   
+}
+
+</style>
+
+<style type="text/css">
+
+
+h2 {color:#fff;
+    text-align: center;
+}
+
+</style>
+
+<script type="text/javascript">
+$(function() {
+$().jSnow();
+});
+
+</script>
+
+<style type="text/css">
+    
+     body {
+    background-color: #21fced;
+    background-image: url("VzZMHd.jpg");
+  
+}
+
+
+</style>
+
+</head>
+<body>
+
+<h2>Click the Button to get upcoming  events</h2>
+
+
+<div><button onclick="clickButton()">Click me!</button> 
+
+
+
+<a href="EventRecoder.html"> <button> Add Event </button> </a>
+<a href="DeleteEvents.html"> <button> Delete Event </button> </a>
+
+
+</div>
+<p id="demo"></p>
+
+<script>
+
+//connecting to server using JSONP (JSON with Padding) method
+
+function clickButton() {
+    var obj, s
+    obj = { "table":"customers"};
+    s = document.createElement("script");
+    s.src = "jsonp_demo_db.php?x=" + JSON.stringify(obj);
+    document.body.appendChild(s);
+}
+
+// data visualization part 
+
+function myFunc(myObj) {
+    var x, txt = "";
+   txt += "<table border='1'> <tr> <th>Event Name</th> <th>Location</th> <th>Date</th> <th> Time </th> <th>Event Organizer</th> <th>Organizer e-mail</th> <th>Organizer Telephone</th> <th> Group Name </th> <th>Country</th> <th>Expect Attendance </th> <th> Event Id </th> </tr> "
+        for (x in myObj) {
+            txt += "<tr>"+"<td>" + myObj[x].Event + "</td>"+"<td>" + myObj[x].Location + "</td>" +"<td>" + myObj[x]._Date + "</td>" +"<td>" + myObj[x]._Time + "</td>" +"<td>" + myObj[x].Name + "</td>"+"<td>" + myObj[x].email + "</td>"+"<td>" + myObj[x].Telephone + "</td>" +"<td>" + myObj[x].GroupName + "</td>" +"<td>" + myObj[x].Country + "</td>" +"<td>" + myObj[x].Attendance + "</td>" +"<td>" + myObj[x].Id + "</td>" +"</tr>";
+        }
+        txt += "</table>" 
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html>
+	<head>
+		<title>Sky Net</title>
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jsnow.js"></script>
+
+<style type="text/css">
+
+
+h1 {color:#fff;}
+
+</style>
+<script type="text/javascript">
+$(function() {
+$().jSnow();
+});
+</script>
+
+
+
+<style>
+      body {
+    background-color: lightblue;
+    background-image: url("Xm8r0f.jpg");
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+ div {
+    width: 300px;
+    margin: auto;
+    font-style: oblique;
+    text-decoration-color: red;
+   
+}
+/* input decoration*/
+input[type=text] , input[type=password]
+{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    
+    background-position: 2px 2  px; 
+    background-repeat: no-repeat;
+    padding:  4px 15px 4px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+input[type=password]:focus {
+    width: 100%;
+}
+/*button decoraation*/
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #25ffe9;
+    border: none;
+    color: #ff5825;
+    padding: 6px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+    </style>
+	</head>
+	<body>
+		<h2>Event Registation Form</h2>
+	<div>
+  	<form method="post" action="insert.php">
+  <table>
+
+    <tr>
+      <td align="right">User Name :</td>
+      <td align="left"><input type="text" name="uname" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Password :</td>
+      <td align="left"><input type="password" name="pwd" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Event Name:</td>
+      <td align="left"><input type="text" name="event" /></td>
+    </tr>
+	
+    <tr>
+      <td align="right">Event Location:</td>
+      <td align="left"><input type="text" name="location" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Date:</td>
+      <td align="left"><input type="text" name="date" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Time:</td>
+      <td align="left"><input type="text" name="time" /></td>
+    </tr>
+	
+    <tr>
+      <td align="right">Your Name:</td>
+      <td align="left"><input type="text" name="name" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">E-mail:</td>
+      <td align="left"><input type="text" name="email" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">Telephone:</td>
+      <td align="left"><input type="text" name="telephone" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">Group Name:</td>
+      <td align="left"><input type="text" name="group" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">Country:</td>
+      <td align="left"><input type="text" name="country" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">Attendance:</td>
+      <td align="left"><input type="text" name="attendance" /></td>
+    </tr>
+	
+	<tr>
+      <td align="right">Submit:</td>
+      <td align="left"><input type='submit' value='Submit'/> </td>
+	</tr>
+	<tr>
+	  <td align="right">Reset:</td>
+      <td align="left"><input type='reset' value='Clear'></td>
+    </tr>
+  </table>	
+	
+</form>
+
+  <table>
+	<tr>
+	  <td align="right">Upcoming Events :</td>
+      <td align="left"> <a href="DynmicJSNP.html"> <input  type='button' onclick="DynmicJSNP.html" value='Upcoming Evnts'> </a> </td>
+
+      <td align="right">New User:</td>
+      <td align="left"> <a href="registationform.html"> <input  type='button' onclick="registationform.html" value='New User'> </a> </td>
+
+    </tr>
+  </table>
+  </div>
+	</body>
+</html>

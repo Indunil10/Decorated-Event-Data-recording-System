@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sky Net</title>
+
+	
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jsnow.js"></script>
+
+<style type="text/css">
+
+
+h1 {color:#fff;}
+
+</style>
+<script type="text/javascript">
+$(function() {
+$().jSnow();
+});
+</script>
+
+
+
+<style>
+      body {
+    background-color: lightblue;
+    background-image: url("leaf-wallpaper-hd-wallpapersafari.jpg");
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+div {
+    width: 300px;
+    margin: auto;
+    font-style: oblique;
+    text-decoration-color: red;
+   
+}
+
+
+/*form decortion*/
+
+input[type=text] , input[type=password]
+{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    
+    background-position: 2px 2  px; 
+    background-repeat: no-repeat;
+    padding:  4px 15px 4px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+input[type=password]:focus {
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+	<div>	
+	<h2> Event Deleting Form </h2>
+
+	<form method="post" action="DeleteEvents.php">
+  <table>
+
+    <tr>
+      <td align="right">User Name :</td>
+      <td align="left"><input type="text" name="uname" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Password :</td>
+      <td align="left"><input type="password" name="pwd" /></td>
+    </tr>
+
+    <tr>
+      <td align="right">Event ID:</td>
+      <td align="left"><input type="text" name="eid" /></td>
+    </tr>
+
+  </table>	
+	
+  <table>
+	<tr>
+	  
+      <td align="right"> Confirm And Delete Event :</td>
+      <td align="left"> <input type='submit' value='Delete'></td>
+
+      <td align="right"> Reset:</td>
+      <td align="left"> <input type='Reset' value='Reset'></td>
+
+    </tr>
+
+    <tr>
+      <td align="right">Upcoming Events :</td>
+      <td align="left"> <a href="DynmicJSNP.html"> <input  type='button' onclick="DynmicJSNP.html" value='Upcoming Evnts'> </a> </td>
+
+    </tr>
+  </table>
+
+</form>
+</div>
+</body>
+</html>
